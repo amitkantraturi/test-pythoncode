@@ -4,9 +4,9 @@ import requests
 # Initialize a Boto3 client for S3
 def connect_to_s3():
     try:
-        s3_client = boto3..client('s3')
+        s3_client = boto3.client('s3')  # Fixed typo
         print("Successfully connected to S3.")
-        return s3_client;
+        return s3_client  # Removed unnecessary semicolon
     except Exception as e:
         print(f"Error connecting to S3: {e}")
         return None
@@ -27,8 +27,7 @@ def fetch_fake_api_data():
         return None
 
 # Main function
-#if __name__ == "__main__":
-if __name__ == "":
+if __name__ == "__main__":  # Fixed incorrect condition
     # Connect to AWS S3 using Boto3
     s3_client = connect_to_s3()
 
